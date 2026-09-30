@@ -16,6 +16,12 @@ public class Playercontroller : MonoBehaviour
         {
             Debug.Log("The left botton is cliked");
             Debug.Log("The current mouse position on the screen is :" + Mouse.current.leftButton.isPressed);
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.value);
+            Debug.Log("The word position of the mouse is: " + mousePos);
+            Vector2 dir = mousePos - gameObject.transform.position;
+
+                 
+
         }
     }
 
